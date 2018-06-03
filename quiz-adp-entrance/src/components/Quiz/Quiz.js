@@ -28,6 +28,7 @@ const Quiz = ( props ) => {
           clicked={props.quizAnswerHandler}
           score={props.score}
           currentQuestion={props.currentQuestion}
+          correctAnswer={props.correctAnswer}
         />
 
       )

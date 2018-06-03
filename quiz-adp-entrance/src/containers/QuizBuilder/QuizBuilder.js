@@ -7,9 +7,9 @@ import quizData from '../../quiz.json';
 
 class QuizBuilder extends Component {
   state = {
+    quizData: null,
     isQuizStarted: false,
     selectedQuiz: null,
-    quizData: null,
     currentQuestion: 0,
     score: 0,
     correctAnswer: null
@@ -30,24 +30,39 @@ class QuizBuilder extends Component {
     });
   }
   closeModal = () => {
+    let newScore = this.state.score;
+    if (this.state.correctAnswer.answer) {
+      newScore += 1;
+    }
     this.setState( prevState => ({
       correctAnswer: null,
-      currentQuestion: prevState.currentQuestion + 1
+      currentQuestion: prevState.currentQuestion + 1,
+      score: newScore
     }));
+  }
+  resetQuiz = () => {
+    this.setState({
+      isQuizStarted: false,
+      selectedQuiz: null,
+      currentQuestion: 0,
+      score: 0,
+      correctAnswer: null
+    });
   };
   render(){
+    let quizResponse = null;
+    if (this.state.correctAnswer) {
+      quizResponse = (
+        <Modal show={this.state.correctAnswer} modalClosed={this.closeModal}>
+          <QuizResponse response={this.state.correctAnswer.answer}/>
+        </Modal>
+      )
+    }
     return(
       <Wrapper>
-        <Modal show={this.state.correctAnswer} modalClosed={this.closeModal}>
-          <QuizResponse
-            response={
-              this.state.correctAnswer
-              ? this.state.correctAnswer.answer
-              : null
-            }
-          />
-        </Modal>
+        {quizResponse}
         <Quiz
+          reset={this.resetQuiz}
           correctAnswer={this.state.correctAnswer}
           start={this.state.isQuizStarted}
           selectQuiz={this.selectQuizHandler}

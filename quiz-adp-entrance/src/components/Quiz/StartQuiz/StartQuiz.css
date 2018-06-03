@@ -1,0 +1,67 @@
+.StartQuiz{
+  width: 100%;
+  margin: 30px auto;
+}
+.StartQuiz h1{
+  color: #fff;
+  text-decoration: underline;
+  margin: 40px 0 60px 0;
+  font-size: 6rem;
+}
+.StartQuiz button{
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 1.6rem;
+  margin: 15px auto;
+  padding: 50px 50px;
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+}
+.StartQuiz button:before{
+  content: '';
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  transition: all ease 0.3s;
+  transform-origin: left;
+  transform: translate(0);
+  z-index: -1;
+}
+.StartQuiz button:hover{
+  cursor: pointer;
+  color: #21bab7;
+}
+.StartQuiz button:hover:before{
+    width: 100%;
+}
+
+@media (min-width: 500px) {
+  .StartQuiz{
+    width: 100%;
+    margin: 30px auto;
+  }
+  .StartQuiz h1{
+    color: #fff;
+    text-decoration: underline;
+    margin: 40px;
+    font-size: 6rem;
+  }
+  .StartQuiz button{
+    position: relative;
+    display: block;
+    width: auto;
+    font-size: 1.6rem;
+    margin: 15px auto;
+    padding: 25px 50px;
+    border: 2px solid #fff;
+    background: none;
+    color: #fff;
+  }
+
+}

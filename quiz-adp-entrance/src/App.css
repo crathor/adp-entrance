@@ -1,3 +1,9 @@
 .App {
+  position: relative;
+  padding: 20px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #21bab7;
+  z-index: 10;
 }

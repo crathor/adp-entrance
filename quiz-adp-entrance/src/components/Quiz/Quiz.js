@@ -4,7 +4,6 @@ import ActiveQuiz from './ActiveQuiz/ActiveQuiz';
 import QuizResults from './QuizResults/QuizResults';
 
 const Quiz = ( props ) => {
-  console.log(props);
   if ( !props.start ) {
 
     return <StartQuiz clicked={props.selectQuiz}/>
@@ -15,7 +14,7 @@ const Quiz = ( props ) => {
 
         return  (
 
-          <QuizResults />
+          <QuizResults result={props.score} reset={props.reset}/>
 
         )
 

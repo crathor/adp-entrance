@@ -1,0 +1,53 @@
+.QuizResults {
+  width: 100%;
+  margin: 40px auto;
+}
+.QuizResults p{
+  text-align: center;
+  margin: 10px;
+  font-size: 6rem;
+}
+.QuizResults h1{
+  text-align: center;
+  margin: 20px auto;
+  font-size: 6rem;
+}
+.QuizResults h2{
+  text-align: center;
+  margin: 0 auto;
+  font-size: 5rem;
+}
+.QuizResults .pass{
+  color: green;
+}
+.QuizResults .fail{
+  color: red;
+}
+.QuizResults button{
+  position: relative;
+  display: block;
+  font-size: 1.6rem;
+  padding: 25px 50px;
+  margin: 40px auto;
+  border: 2px solid #fff;
+  background: none;
+}
+.QuizResults button:before{
+  content: '';
+  position: absolute;
+  height: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  transition: all ease 0.3s;
+  z-index: -1;
+}
+.QuizResults button:hover{
+  cursor: pointer;
+  color: #21bab7;
+}
+.QuizResults button:hover:before{
+  height: 100%;
+}

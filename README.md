@@ -1,3 +1,19 @@
+# Quiz Project
+
+## Getting started requirements
+
+Node v8.11.2^
+NPM v5.8.1^ or Yarn v1.7.0^
+
+## Starting instructions
+
+1. clone this github repo
+2. cd into adp-entrance/quiz-adp-entrance
+3. run npm install OR yarn install
+4. run npm start OR yarn start
+5. ENJOY!
+
+
 # App Developer Entrance Project
 
 Create a client-side quiz app based on the provided requirements, data and views.
